@@ -1,0 +1,149 @@
+/* common */
+body{
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width: 100%; /* 基本的に親要素(=body)の幅に合わせていっぱい広がる */
+  max-width: 960px; /* max-widthよりは大きくならない */
+  padding: 0 4%;
+  margin: 0 auto 100px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1{
+  margin: 0;
+}
+
+h2{
+  margin: 0 0 60px;
+  font-size: 32px;
+  color: #383E45;
+  display: inline-block;
+  border-bottom: solid 1px #383E45;
+}
+
+h3{
+  margin: 0;
+  font-size: 16px;
+  color: #383E45;
+  margin: 10px 0;
+}
+
+p{
+  margin: 0;
+  font-size: 14.4px;
+  color: #383E45;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+ul{
+  display: flex; /* navの項目を横並びにする */
+  list-style: none; /* navの項目の・を消す */
+  padding: 0;
+  margin: 0;
+} 
+
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+/* header */
+#header{
+  display: flex; /* ロゴとnavを横並びにする */
+  align-items: center; /* ロゴとnavを中央揃え(交差軸)にする */
+  justify-content: space-between; /* 両端に配列する */
+  margin: 0 auto;
+}
+
+#header ul{
+  gap: 30px;
+}
+
+#header li a{
+  text-decoration: none; /* navの項目の下線を消す */
+  color: #24292E;
+  font-size: 14.4px;
+}
+
+#header li a:hover {
+  opacity: 0.7;
+}
+
+#header img{
+  padding: 10px 0;
+}
+
+#mainvisual img{
+  width: 100%;
+  height: 600px;
+  margin-bottom: 80px;
+  object-fit: cover; /* 縦横の小さい方を基準に自動で拡大・縮小 */
+}
+
+
+
+/* About */
+#about img{
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+#about .text {
+  text-align: left;
+}
+
+
+/* Bicycle */
+#bicycle .content{
+  justify-content: space-between;
+  gap: 15px;
+}
+
+#bicycle  img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* footer */
+footer p{
+  font-size: 8px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+@media  screen and (max-width: 600px){
+  .content{
+    flex-direction: column;
+    /* gap: 0; */ 
+  }
+
+  #bicycle .content{
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #bicycle li{
+    margin-bottom: 30px;
+  }
+
+  #about img{
+    margin: 0;
+  }
+
+
+}
