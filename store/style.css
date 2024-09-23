@@ -1,0 +1,290 @@
+body{
+  margin: 0;
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-feature-settings: "palt";
+  color: #000000;
+  font-size: 14.4px;
+}
+
+.top-container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.parallax{
+  min-height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 120px;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+h2{
+  color: #fff;
+  font-size: 72px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+h3{
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: solid 5px #E03131;
+  display: inline-block;
+  margin-bottom: 60px;
+  line-height: 1.5;
+}
+
+
+
+
+/* ヘッダー */
+header{
+  position: relative;
+  background-image: url(img/mainvisual.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px 50px;
+}
+
+header h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.nav-pc{
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+}
+
+.nav-pc a{
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+
+
+/* MENU */
+#menu{
+  margin: 20px 0 140px;
+}
+
+#menu .parallax{
+  background-image: url(img/menu.jpg);
+}
+
+#menu .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-menu, 
+.right-menu{
+  width: 50%;
+  padding: 0 45px;
+}
+
+.left-menu{
+  border-right: solid 3px #aaaaaa;
+}
+
+.menu-tx dl{
+  display: flex;
+}
+
+.menu-tx dt{
+  width: 90%;
+  text-align: left;
+  border-bottom: dotted 1px #000000;
+  margin: 0 0 25px;
+  line-height: 1.5;
+}
+
+.menu-tx dd{
+  width: 10%;
+  text-align: right;
+  padding: 10px 0 0;
+}
+
+.other-menu h3{
+  margin-top: 58px;
+}
+
+footer{
+  padding: 10px 0;
+}
+
+footer p{
+  font-size: 10px;
+}
+
+
+/* About */
+#about{
+  margin-bottom: 140px;
+}
+
+#about .parallax{
+  background-image: url(img/about.jpg);
+}
+
+#about .about-tx{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+#about .about-tx li{
+  width: 50%;
+  padding: 15px 15px;
+  text-align: left;
+  line-height: 2;
+}
+
+#about a{
+  display: inline-block;
+  padding: 15px 50px;
+  border: solid 1px transparent;
+  position: relative;
+}
+
+#about a::before,
+#about a::after{
+  position: absolute;
+  content: "";
+  border: solid 1px #E03131;
+  transition: all 0.3s ease;
+}
+
+
+#about a::before{
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 50%;
+  border-right: none;
+  border-bottom: none;
+}
+
+#about a::after{
+  bottom: 0;
+  right: 0;
+  width: 15%;
+  height: 50%;
+  border-left: none;
+  border-top: none;
+}
+
+#about a:hover::before,
+#about a:hover::after{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* LOCATION */
+#location{
+  margin-bottom: 140px;
+}
+
+#location .parallax{
+  background-image: url(img/location.jpg);
+}
+
+#location iframe{
+  filter:grayscale(1);
+  width: 100%;
+  height: 400px;
+}
+
+#location .location-tx p{
+  margin-top: 15px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px){
+  .parallax{
+    min-height: 150px;
+    background-attachment: scroll;
+    margin-bottom: 40px;
+  }
+
+  h2{
+    font-size: 40px;
+  }
+
+  h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #menu{
+    margin: 10px 0 110px;
+  }
+
+  #menu .container{
+    flex-direction: column;
+  }
+
+  .left-menu, 
+  .right-menu{
+    width: 100%;
+    padding: 0;
+  }
+ 
+  .right-menu h3{
+    margin-top: 40px;
+  }
+
+  .left-menu{
+    border-right: none;
+  }
+
+  #about{
+    margin-bottom: 110px;
+  }
+
+  #about .about-tx li{
+    width: 100%;
+    padding: 15px 0 0;
+    text-align: left;
+    line-height: 2;
+  }
+
+  #location{
+    margin-bottom: 110px;
+  }
+
+  }
